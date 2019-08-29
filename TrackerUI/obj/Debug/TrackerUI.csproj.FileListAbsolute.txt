@@ -1,0 +1,9 @@
+D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerUI\bin\Debug\TrackerUI.exe.config
+D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerUI\bin\Debug\TrackerUI.exe
+D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerUI\bin\Debug\TrackerUI.pdb
+D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.csprojResolveAssemblyReference.cache
+D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.TournamentViewer.resources
+D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.Properties.Resources.resources
+D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.csproj.GenerateResource.Cache
+D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.exe
+D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.pdb
