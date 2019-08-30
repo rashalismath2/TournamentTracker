@@ -152,6 +152,7 @@
             this.addTeamButton.TabIndex = 21;
             this.addTeamButton.Text = "Add Team";
             this.addTeamButton.UseVisualStyleBackColor = true;
+            this.addTeamButton.Click += new System.EventHandler(this.addTeamButton_Click_1);
             // 
             // createPrizeButton
             // 

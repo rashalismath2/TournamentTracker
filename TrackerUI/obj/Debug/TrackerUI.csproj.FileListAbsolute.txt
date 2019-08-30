@@ -7,3 +7,7 @@ D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerUI\obj\Debug\Tracke
 D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.csproj.GenerateResource.Cache
 D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.exe
 D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.pdb
+D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.CreatePrize.resources
+D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.CreateTeam.resources
+D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.CreateTournament.resources
+D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.TournamentDashboard.resources

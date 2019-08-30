@@ -11,7 +11,7 @@ namespace TrackerLibrary
         /// <summary>
         ///     represent one team in the matchup
         /// </summary>
-        public TeamModel TeamComputing { get; set; }
+        public TeamModel TeamCompeting { get; set; }
 
         /// <summary>
         ///    Represent the score for this particular team
@@ -22,5 +22,7 @@ namespace TrackerLibrary
         ///    Represent the matchup that this team came from as the winner
         /// </summary>
         public MatchupModel ParentMatchup { get; set; }
+
+   
     }
 }
