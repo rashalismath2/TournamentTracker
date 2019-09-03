@@ -15,7 +15,7 @@ namespace TrackerLibrary.Models
         /// <summary>
         ///     Reperesent the palace by as a number
         /// </summary>
-        public int PlaceNUmber { get; set; }
+        public int PlaceNumber { get; set; }
 
         /// <summary>
         ///    Represent the palce as a string

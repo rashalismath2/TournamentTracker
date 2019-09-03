@@ -35,6 +35,7 @@ namespace TrackerUI
         /// <param name="e"></param>
         private void createPrizeButton_Click(object sender, EventArgs e)
         {
+            //if validation of fields failed
             if (!ValidateFields())
             {
                 MessageBox.Show(outputString,"Warning Message",MessageBoxButtons.OK,MessageBoxIcon.Error);
@@ -42,16 +43,26 @@ namespace TrackerUI
                 clearField();
 
             }
+            //if validation of field passed
             else {
+                PrizeModel model=null;
                 foreach (IDataconnection connections in GlobalConfig.Connections) {
-                    connections.CreatePrize(new PrizeModel {
+                    model=connections.CreatePrize(new PrizeModel {
                         PlaceName = placeNameText.Text,
                         PrizeAmount=decimal.Parse(placeAmountText.Text),
                         PrizePrecentage=int.Parse(placePrecentageText.Text),
-                       PlaceNUmber=int.Parse(placeNumberText.Text)
+                       PlaceNumber=int.Parse(placeNumberText.Text)
                     });
                 }
-                MessageBox.Show("Prize Created","Success Message",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                //if a model recieved
+                if (model != null)
+                {
+                    MessageBox.Show("Prize Created", "Success Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else {
+                    MessageBox.Show("Prize haas not been Created", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
             }
       
         }
@@ -95,7 +106,7 @@ namespace TrackerUI
                 output = false;
             }
 
-            if (placeAmountValue>=0 && prizePrecentageValue>=0)
+            if (placeAmountValue<=0 && prizePrecentageValue<=0)
             {
                 outputString = outputString + "* Enter Either place amount or precentage \n";
                 output = false;

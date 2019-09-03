@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,12 +27,22 @@ namespace TrackerLibrary
         public static void InitializeConnection(bool sql,bool textfile) {
 
             if (sql) {
-                Connections.Add(new SqlConnector());
+                Connections.Add(new SqlConnector(SqlConnectionSingleton.getMySqlConnection()));
             }
             
             if (textfile) {
                 Connections.Add(new TextConnector());
             }
         }
+
+        /// <summary>
+        /// Used to get the connection string
+        /// </summary>
+        /// <param name="name">Connection string name</param>
+        /// <returns>returns a string value of connection</returns>
+        public static string ConnectionString(string name) {
+            return ConfigurationManager.ConnectionStrings[name].ConnectionString;
+        }
+
     }
 }
