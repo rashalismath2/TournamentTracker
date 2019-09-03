@@ -9,6 +9,10 @@ namespace TrackerLibrary
     public class PrizeModel
     {
         /// <summary>
+        ///   Give the id of a prize
+        /// </summary>
+        public int Id { get; set; }
+        /// <summary>
         ///     Reperesent the palace by as a number
         /// </summary>
         public int PlaceNUmber { get; set; }
@@ -26,6 +30,6 @@ namespace TrackerLibrary
         /// <summary>
         ///     represent the precentage of prize from the tournament prize.
         /// </summary>
-        public double PrizePrecentage { get; set; }
+        public int PrizePrecentage { get; set; }
     }
 }

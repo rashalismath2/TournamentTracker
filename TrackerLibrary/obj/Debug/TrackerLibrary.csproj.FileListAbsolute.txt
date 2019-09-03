@@ -1,0 +1,5 @@
+D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerLibrary\bin\Debug\TrackerLibrary.dll
+D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerLibrary\bin\Debug\TrackerLibrary.pdb
+D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerLibrary\obj\Debug\TrackerLibrary.csprojResolveAssemblyReference.cache
+D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerLibrary\obj\Debug\TrackerLibrary.dll
+D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerLibrary\obj\Debug\TrackerLibrary.pdb

@@ -11,3 +11,5 @@ D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerUI\obj\Debug\Tracke
 D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.CreateTeam.resources
 D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.CreateTournament.resources
 D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerUI\obj\Debug\TrackerUI.TournamentDashboard.resources
+D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerUI\bin\Debug\TrackerLibrary.dll
+D:\tutorials\c#\gametracker\Program\TournamentTracker\TrackerUI\bin\Debug\TrackerLibrary.pdb
