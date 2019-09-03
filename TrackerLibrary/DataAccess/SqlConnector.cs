@@ -18,7 +18,12 @@ namespace TrackerLibrary.DataAccess
         public SqlConnector(MySqlConnection connection) {
             this.connection = connection;
         }
-        //TODo - add logics to save prize model into the database
+        
+        /// <summary>
+        /// Store the model info in table
+        /// </summary>
+        /// <param name="model">Takes a model object</param>
+        /// <returns>If model has been saved returns that mode else returns null</returns>
         public PrizeModel CreatePrize(PrizeModel model)
         {
             string sql = @"INSERT INTO prizes (PlaceNumber,PlaceName,PrizePrecentage,PrizeAmount) values(@PlaceNumber,@PlaceName,@PrizePrecentage

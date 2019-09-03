@@ -15,23 +15,22 @@ namespace TrackerLibrary
     public static class GlobalConfig
     {
         /// <summary>
-        /// List can include either sql or textfile connections
+        /// Setting a database connection type
         /// </summary>
-        public static List<IDataconnection> Connections { get; private set; } = new List<IDataconnection>();
-
+        public static IDataconnection Connection { get; private set; }
+       
         /// <summary>
-        /// Application can store data in qither or both as sql and textfiles
+        /// Letting choose to either Sql ortextfile as the database
         /// </summary>
-        /// <param name="sql">If we want to store in sql this is true</param>
-        /// <param name="textfile">If we want to store in textfile this is true</param>
-        public static void InitializeConnection(bool sql,bool textfile) {
+        /// <param name="db">DatabaseConnectionType Enum</param>
+        public static void InitializeConnection(DatabaseConnectionTypes db) {
 
-            if (sql) {
-                Connections.Add(new SqlConnector(SqlConnectionSingleton.getMySqlConnection()));
+            if (db==DatabaseConnectionTypes.MySql) {
+                Connection=new SqlConnector(SqlConnectionSingleton.getMySqlConnection());
             }
             
-            if (textfile) {
-                Connections.Add(new TextConnector());
+            else if (db == DatabaseConnectionTypes.TextFile) {
+                Connection=new TextConnector();
             }
         }
 

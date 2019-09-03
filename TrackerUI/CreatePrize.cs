@@ -45,15 +45,17 @@ namespace TrackerUI
             }
             //if validation of field passed
             else {
-                PrizeModel model=null;
-                foreach (IDataconnection connections in GlobalConfig.Connections) {
-                    model=connections.CreatePrize(new PrizeModel {
-                        PlaceName = placeNameText.Text,
-                        PrizeAmount=decimal.Parse(placeAmountText.Text),
-                        PrizePrecentage=int.Parse(placePrecentageText.Text),
-                       PlaceNumber=int.Parse(placeNumberText.Text)
-                    });
-                }
+
+                PrizeModel model = null;
+
+                model = GlobalConfig.Connection.CreatePrize(new PrizeModel
+                {
+                    PlaceName = placeNameText.Text,
+                    PrizeAmount = decimal.Parse(placeAmountText.Text),
+                    PrizePrecentage = int.Parse(placePrecentageText.Text),
+                    PlaceNumber = int.Parse(placeNumberText.Text)
+                });
+
                 //if a model recieved
                 if (model != null)
                 {
@@ -61,7 +63,6 @@ namespace TrackerUI
                 }
                 else {
                     MessageBox.Show("Prize haas not been Created", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 }
             }
       

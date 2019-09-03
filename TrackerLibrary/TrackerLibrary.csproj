@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccess\SqlConnectionSingleton.cs" />
+    <Compile Include="Enums.cs" />
     <Compile Include="GlobalConfig.cs" />
     <Compile Include="DataAccess\IDataconnection.cs" />
     <Compile Include="Models\MatchupEntryModel.cs" />
