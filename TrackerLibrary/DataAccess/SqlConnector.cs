@@ -38,5 +38,31 @@ namespace TrackerLibrary.DataAccess
             }
             return model = null;
         }
+
+
+        public PersonModel CreatePerson(PersonModel model)
+        {
+            string sql = @"INSERT INTO people (FirstName,LastName,EmailAddress,ContactNumber) values(@FirstName,@LastName,@EmailAddress
+                ,@ContactNumber)";
+
+            var affectedRows = connection.Execute(sql, new[] {
+                new {FirstName=model.FirstName,LastName=model.LastName,EmailAddress=model.EmailAddress,ContactNumber=model.ContactNumber }
+            });
+
+            if (affectedRows == 1)
+            {
+                return model;
+            }
+            return model = null;
+        }
+
+       
+        public List<PersonModel> GetAllPeople()
+        {
+            string sql = "SELECT * from people";
+            List<PersonModel> list = connection.Query<PersonModel>(sql).ToList();
+
+            return list;
+        }
     }
 }

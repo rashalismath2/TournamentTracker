@@ -18,5 +18,18 @@ namespace TrackerLibrary.DataAccess
         /// <param name="model">Takes a PrizeModel</param>
         /// <returns>PrizeModel just created from this method</returns>
         PrizeModel CreatePrize(PrizeModel model);
+
+        /// <summary>
+        /// Creates a new team member and store it in database
+        /// </summary>
+        /// <param name="model">Takse a PersonModel</param>
+        /// <returns>Returns a Person Model</returns>
+        PersonModel CreatePerson(PersonModel model);
+
+        /// <summary>
+        /// Pulls out all the people record in the database
+        /// </summary>
+        /// <returns>List of PersonModel</returns>
+        List<PersonModel> GetAllPeople();
     }
 }

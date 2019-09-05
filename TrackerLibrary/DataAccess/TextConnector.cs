@@ -10,6 +10,9 @@ namespace TrackerLibrary.DataAccess
     /// <summary>
     ///     Implelements IDataconnection interface to save model in text files
     /// </summary>
+    /// 
+
+    /**
     public class TextConnector : IDataconnection
     {
         //TODO - Write logics for save prize model in textfile
@@ -17,5 +20,5 @@ namespace TrackerLibrary.DataAccess
         {
            return model;
         }
-    }
+    } **/
 }

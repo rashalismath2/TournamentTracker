@@ -21,7 +21,7 @@ namespace TrackerUI
             //Using sql and textfile
             TrackerLibrary.GlobalConfig.InitializeConnection(DatabaseConnectionTypes.MySql);
 
-            Application.Run(new CreatePrize());
+            Application.Run(new CreateTeam());
         }
     }
 }
