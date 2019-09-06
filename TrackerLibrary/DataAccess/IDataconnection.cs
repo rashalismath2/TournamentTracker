@@ -31,5 +31,12 @@ namespace TrackerLibrary.DataAccess
         /// </summary>
         /// <returns>List of PersonModel</returns>
         List<PersonModel> GetAllPeople();
+
+        /// <summary>
+        /// Creates a New Team
+        /// </summary>
+        /// <param name="team">Gets a TeamModel Object</param>
+        /// <returns>Added TeamModelobject</returns>
+        TeamModel CreateTeam(TeamModel team);
     }
 }

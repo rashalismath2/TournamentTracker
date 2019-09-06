@@ -64,5 +64,39 @@ namespace TrackerLibrary.DataAccess
 
             return list;
         }
+
+        public TeamModel CreateTeam(TeamModel team)
+        {
+            //insert team name in team table
+            string sql = "INSERT INTO teams (TeamName) values (@TeamName)";
+
+            int affectedRows = connection.Execute(sql, new { TeamName = team.TeamName });
+
+            //get the team id from the database
+            if (affectedRows == 1)
+            {
+                sql = "SELECT * FROM teams WHERE TeamName=@TeamName";
+                TeamModel record = connection.Query<TeamModel>(sql, new { TeamName = team.TeamName }).Single();
+
+                //store the team members and team id on the teams_has_people table
+
+                foreach (PersonModel person in team.TeamMembers)
+                {
+                    sql = "INSERT INTO teams_has_people (Teams_id,People_id) values (@Teams_id,@People_id)";
+                    affectedRows = connection.Execute(sql, new { Teams_id = record.id, People_id = person.id });
+
+                    if (affectedRows != 1)
+                    {
+                        return team = null;
+                    }
+                }
+            }
+            else {
+                return team = null;
+            }
+
+
+            return team;
+        }
     }
 }
