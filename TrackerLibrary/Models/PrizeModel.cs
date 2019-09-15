@@ -11,7 +11,7 @@ namespace TrackerLibrary.Models
         /// <summary>
         ///   Give the id of a prize
         /// </summary>
-        public int Id { get; set; }
+        public int id { get; set; }
         /// <summary>
         ///     Reperesent the palace by as a number
         /// </summary>

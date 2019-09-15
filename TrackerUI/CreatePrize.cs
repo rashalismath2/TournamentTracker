@@ -16,9 +16,11 @@ namespace TrackerUI
     public partial class CreatePrize : Form
     {
         private string outputString;
-        public CreatePrize()
+        IGetPrize getPrize;
+        public CreatePrize(IGetPrize getPrize)
         {
             InitializeComponent();
+            this.getPrize = getPrize;
         }
 
         private void CreatePrize_Load(object sender, EventArgs e)
@@ -59,7 +61,9 @@ namespace TrackerUI
                 //if a model recieved
                 if (model != null)
                 {
+                    this.getPrize.RequestedPrize(model);
                     MessageBox.Show("Prize Created", "Success Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
                 else {
                     MessageBox.Show("Prize haas not been Created", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -19,7 +19,8 @@ namespace TrackerLibrary.DataAccess
 
         public static MySqlConnection getMySqlConnection() {
             if (instance==null) {
-                return new MySqlConnection(GlobalConfig.ConnectionString(dbName));
+                instance = new MySqlConnection(GlobalConfig.ConnectionString(dbName));
+                return instance;
             }
 
             return instance;

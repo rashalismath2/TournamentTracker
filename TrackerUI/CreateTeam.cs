@@ -16,16 +16,18 @@ namespace TrackerUI
     {
         private List<PersonModel> availableMembers=new List<PersonModel>();
         private List<PersonModel> chosenMembers = new List<PersonModel>();
+        private IGetTeam getTeam;
 
         /// <summary>
         /// Saves the error messages when validating forms
         /// </summary>
         public string outputString { get; set; }
 
-        public CreateTeam()
+        public CreateTeam(IGetTeam getTeam)
         {
             InitializeComponent();
 
+            this.getTeam = getTeam;
             getAllPeopleData();
           
         }
@@ -176,6 +178,7 @@ namespace TrackerUI
                 if (model != null)
                 {
                     MessageBox.Show("Team Created", "Success Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    getTeam.GetTeam(model);
                     clearCreateTeamFields();
                 }
             }
@@ -188,6 +191,10 @@ namespace TrackerUI
         private bool validateCreateTeam()
         {
             //TODO  validate fields before submit create team
+            if (teamnameText.Text == "" || chosenMembers.Count==0)  {
+                outputString = "Please Enter a team name and select team members";
+                return false;
+            }
             return true;
         }
 
@@ -196,7 +203,7 @@ namespace TrackerUI
         /// </summary>
         private void clearCreateTeamFields() {
             teamnameText.Text = "";
-            chosenMembers = null;
+            chosenMembers.Clear();
             getAllPeopleData();
         }
     }

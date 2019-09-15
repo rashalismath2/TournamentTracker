@@ -38,5 +38,18 @@ namespace TrackerLibrary.DataAccess
         /// <param name="team">Gets a TeamModel Object</param>
         /// <returns>Added TeamModelobject</returns>
         TeamModel CreateTeam(TeamModel team);
+
+        /// <summary>
+        /// Getting all the team from the database
+        /// </summary>
+        /// <returns>Returns a list of teams</returns>
+        List<TeamModel> GetAllTeam();
+
+        /// <summary>
+        /// Saving the torunament model into database
+        /// </summary>
+        /// <param name="model">Takes a tournament model</param>
+        /// <returns>Returns a tournament model</returns>
+        TournamentModel CreateTrounament(TournamentModel  model);
     }
 }
